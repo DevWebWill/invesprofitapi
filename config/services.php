@@ -50,4 +50,12 @@ return [
         'retry_sleep_ms' => (int) env('CASSANDRA_AI_RETRY_SLEEP_MS', 250),
     ],
 
+    'catastro' => [
+        'base_url' => env('CATRASTRO_BASE_URL', env('CATASTRO_BASE_URL', 'https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCallejero.svc/json')),
+        'timeout' => (float) env('CATASTRO_TIMEOUT', 30),
+        'connect_timeout' => (float) env('CATASTRO_CONNECT_TIMEOUT', 10),
+        'retry_times' => (int) env('CATASTRO_RETRY_TIMES', 2),
+        'retry_sleep_ms' => (int) env('CATASTRO_RETRY_SLEEP_MS', 250),
+    ],
+
 ];
