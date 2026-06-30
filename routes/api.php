@@ -50,3 +50,9 @@ Route::middleware('auth:sanctum')->group(function (): void {
     Route::post('favorites', [FavoriteController::class, 'store']);
     Route::delete('favorites/{propertyExternalId}', [FavoriteController::class, 'destroy']);
 });
+
+Route::get('/test', function () {
+
+    return response()->json(['ok' => true]);
+
+});
